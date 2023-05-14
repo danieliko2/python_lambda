@@ -14,8 +14,9 @@ pipeline {
                 sh 'pip install --target ./package -r requirements.txt'
                 sh 'zip -r ./my-deployment-package.zip ./package/*'
                 sh 'zip ./my-deployment-package.zip ./lambda_function.py'
+                sh 'aws lambda update-function-code --function-name ex4 --zip-file fileb://my-deployment-package.zip'
                 sh 'ls -la'
-                // sh 'zip ./scripts/my-deployment-package.zip ./scripts/lambda_function.py'
+
             }
         }
     }

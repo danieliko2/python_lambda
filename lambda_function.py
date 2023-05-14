@@ -5,9 +5,7 @@ def lambda_handler(event, context):
 
     wiki_wiki = wikipediaapi.Wikipedia('en')
     
-    # page_input = input("Please insert wikipedia page: ")
-    # return event['key1']
-    
+    print("test")
     page_input = event['key1']
     
     page_py = wiki_wiki.page(page_input)
