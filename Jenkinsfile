@@ -24,7 +24,7 @@ pipeline {
                 sh 'docker build -t danieliko/python_lambda .'
                 sh 'docker push danieliko/python_lambda'
                 sh 'docker -H tcp://172.31.22.8:2375 pull danieliko/python_lambda'
-                sh 'docker -H tcp://172.31.22.8:2375 -p 80:5000 danieliko/python_lambda'
+                sh 'docker -H tcp://172.31.22.8:2375 run -p 80:5000 danieliko/python_lambda'
             }
         }
     }
