@@ -4,10 +4,10 @@ import json
 def lambda_handler(event, context):
 
     wiki_wiki = wikipediaapi.Wikipedia('en')
-    
+
     print("test")
     page_input = event['key1']
-    
+    print("hello from jenkins")
     page_py = wiki_wiki.page(page_input)
     
     if page_py.exists():
