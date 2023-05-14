@@ -16,3 +16,5 @@ def test_page_missing():
     status = f'{response["statusCode"]}'
     expect = "400"
     assert expect == status
+
+test_page_exists()

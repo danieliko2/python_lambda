@@ -21,7 +21,7 @@ def ex():
         return_value=response['Payload'].read().decode("utf-8")
         return_value=json.loads(return_value)
 
-        print(return_value['body'])
+        print(return_value)
         return return_value["body"]
     except:
         print("Failiure")
